@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ryan Menezes</title>
+    <title>Home on Ryan Menezes</title>
     <link>/</link>
-    <description>Recent content on Ryan Menezes</description>
+    <description>Recent content in Home on Ryan Menezes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate>
@@ -17,18 +17,19 @@
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/12/15/the-champions-league-draw-simulated/</guid>
-      <description>About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet:
-File under &amp;quot;Extremely random analyses&amp;quot;: Probabilities (in %) of matchups for Champions League knockout round across 1 million simulations. Draw is in a few hours. Three English teams finishing as runners-up makes the makes the distribution of possibilities a little lopsided. pic.twitter.com/mOV1D6oPLn
-&amp;mdash; Ryan Menezes (@ryanvmenezes) December 17, 2018  As someone who grew up watching a truly absurd amount of American sports, I’m learning a lot.</description>
+      <description>File under &amp;quot;Extremely random analyses&amp;quot;: Probabilities (in %) of matchups for Champions League knockout round across 1 million simulations. Draw is in a few hours. Three English teams finishing as runners-up makes the makes the distribution of possibilities a little lopsided. pic.twitter.com/mOV1D6oPLn
+&amp;mdash; Ryan Menezes (@ryanvmenezes) December 17, 2018  library(furrr) library(tidyverse) library(formattable) Create the data.
+teams = tibble( team = c( &amp;#39;PSG|a|w|fra&amp;#39;, &amp;#39;Bayern|b|w|ger&amp;#39;, &amp;#39;City|c|w|eng&amp;#39;, &amp;#39;Juve|d|w|ita&amp;#39;, &amp;#39;Liverpool|e|w|eng&amp;#39;, &amp;#39;Barca|f|w|esp&amp;#39;, &amp;#39;Leipzig|g|w|ger&amp;#39;, &amp;#39;Valencia|h|w|esp&amp;#39;, &amp;#39;Real|a|r|esp&amp;#39;, &amp;#39;Spurs|b|r|eng&amp;#39;, &amp;#39;Atalanta|c|r|ita&amp;#39;, &amp;#39;Atletico|d|r|esp&amp;#39;, &amp;#39;Napoli|e|r|ita&amp;#39;, &amp;#39;Dortmund|f|r|ger&amp;#39;, &amp;#39;Lyon|g|r|fra&amp;#39;, &amp;#39;Chelsea|h|r|eng&amp;#39; ) ) %&amp;gt;% separate(team, into = c(&amp;#39;team&amp;#39;, &amp;#39;group&amp;#39;, &amp;#39;finish&amp;#39;, &amp;#39;country&amp;#39;)) teams {&#34;</description>
     </item>
     
     <item>
-      <title>About</title>
+      <title>About me</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>More about me TK.</description>
+      <description>Hello. I&#39;m Ryan Menezes. Here are some things you ought to know about me:
+I&#39;m a journalist at the Los Angeles Times, where I analyze data for stories that span a wide variety of subjects. As a member of the Data and Graphics team, I also write stories, craft visualizations and tackle random journalistic problems with the help of code. I&#39;ve been at The Times since 2013, when I started as a fellow in the Minority Editorial Training Program (commonly referred to as METPro).</description>
     </item>
     
   </channel>
