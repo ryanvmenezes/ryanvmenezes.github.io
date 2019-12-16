@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>soccer on Ryan Menezes</title>
+    <link>/tags/soccer/</link>
+    <description>Recent content in soccer on Ryan Menezes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/soccer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Champions League draw, simulated</title>
+      <link>/2019/12/15/the-champions-league-draw-simulated/</link>
+      <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/15/the-champions-league-draw-simulated/</guid>
+      <description>About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet:
+File under &amp;quot;Extremely random analyses&amp;quot;: Probabilities (in %) of matchups for Champions League knockout round across 1 million simulations. Draw is in a few hours. Three English teams finishing as runners-up makes the makes the distribution of possibilities a little lopsided. pic.twitter.com/mOV1D6oPLn
+&amp;mdash; Ryan Menezes (@ryanvmenezes) December 17, 2018  As someone who grew up watching a truly absurd amount</description>
+    </item>
+    
+  </channel>
+</rss>

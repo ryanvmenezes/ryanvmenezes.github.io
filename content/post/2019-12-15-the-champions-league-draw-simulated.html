@@ -1,0 +1,67 @@
+---
+title: The Champions League draw, simulated
+subhead: Or, how I learned to stop worrying and embraced (semi-)random playoffs
+author: Ryan Menezes
+date: '2019-12-15'
+slug: the-champions-league-draw-simulated
+categories:
+  - R
+tags:
+  - football
+  - soccer
+---
+
+
+
+<p>About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet:</p>
+{{% tweet "1074556953190256640" %}}
+<p>As someone who grew up watching a truly absurd amount</p>
+<p>It would be like if Major League Baseball instituted a playoff series where each team hosts one game and the winner is decided by the total number of runs scored.</p>
+<p>But it occurred to me that the possible matchups in the UEFA Champions League draw are not all equally likely. The draw has two rules: Teams who were in the same group one round earlier can’t be drawn against each other, and neither can teams from the same country. After the winners advance from this round, things get truly random, and you can get</p>
+<p>On a side note, I now find Wikipedia’s use of a <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League_knockout_phase#Bracket">bracket</a> to illustrate the knockout round very misleading. For years I stared at it thinking that group winners and runners-up were placed in a bracket</p>
+<pre class="r"><code>library(furrr)
+library(tidyverse)
+library(formattable)</code></pre>
+<p>Create the data.</p>
+<pre class="r"><code>teams = tibble(
+  team = c(
+    &#39;PSG|a|w|fra&#39;,
+    &#39;Bayern|b|w|ger&#39;,
+    &#39;City|c|w|eng&#39;,
+    &#39;Juve|d|w|ita&#39;,
+    &#39;Liverpool|e|w|eng&#39;,
+    &#39;Barca|f|w|esp&#39;,
+    &#39;Leipzig|g|w|ger&#39;,
+    &#39;Valencia|h|w|esp&#39;,
+    &#39;Real|a|r|esp&#39;,
+    &#39;Spurs|b|r|eng&#39;,
+    &#39;Atalanta|c|r|ita&#39;,
+    &#39;Atletico|d|r|esp&#39;,
+    &#39;Napoli|e|r|ita&#39;,
+    &#39;Dortmund|f|r|ger&#39;,
+    &#39;Lyon|g|r|fra&#39;,
+    &#39;Chelsea|h|r|eng&#39;
+  )
+) %&gt;% 
+  separate(team, into = c(&#39;team&#39;, &#39;group&#39;, &#39;finish&#39;, &#39;country&#39;))
+
+teams</code></pre>
+<pre><code>## # A tibble: 16 x 4
+##    team      group finish country
+##    &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  
+##  1 PSG       a     w      fra    
+##  2 Bayern    b     w      ger    
+##  3 City      c     w      eng    
+##  4 Juve      d     w      ita    
+##  5 Liverpool e     w      eng    
+##  6 Barca     f     w      esp    
+##  7 Leipzig   g     w      ger    
+##  8 Valencia  h     w      esp    
+##  9 Real      a     r      esp    
+## 10 Spurs     b     r      eng    
+## 11 Atalanta  c     r      ita    
+## 12 Atletico  d     r      esp    
+## 13 Napoli    e     r      ita    
+## 14 Dortmund  f     r      ger    
+## 15 Lyon      g     r      fra    
+## 16 Chelsea   h     r      eng</code></pre>
