@@ -3,47 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>/tags/football/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/soccer/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2019/12/15/the-champions-league-draw-simulated/</loc>
-    <lastmod>2019-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
   </url>
   
 </urlset>
