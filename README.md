@@ -1,1 +1,0 @@
-# ryanvmenezes.github.io

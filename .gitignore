@@ -1,1 +1,4 @@
-cutthecheck/draft/*
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
