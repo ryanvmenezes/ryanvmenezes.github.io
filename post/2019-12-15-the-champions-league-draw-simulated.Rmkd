@@ -15,13 +15,17 @@ output:
     df_print: paged
 ---
 
-<!-- About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet: -->
+About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet:
 
 ```{r echo=FALSE}
 blogdown::shortcode('tweet', '1074556953190256640')
 ```
 
-<!-- As someone who grew up watching a truly absurd amount of American sports, I'm learning a lot. -->
+I wanted to expand on why this particular event piqued my curiousity and share the code that generated these numbers.
+
+https://youtu.be/o_wmpUIAUTU?t=274
+
+As someone who grew up watching a truly absurd amount of American sports, my dive into the world of European football has been eye-opening. It's not the sport itself that is foreign to me -- I've always been a casual fan of soccer -- but rather the structure around competition that I've found totally foreign.
 
 <!-- Imagine Major League Baseball instituted a playoff series where each team hosts one game and the winner is decided by the total number of runs scored. I think this has a low chance of happening. But if it did, it surely would make the latter innings of every game meaningful. -->
 
@@ -40,26 +44,69 @@ Create the data.
 ```{r}
 teams = tibble(
   team = c(
-    'PSG|a|w|fra',
-    'Bayern|b|w|ger',
-    'City|c|w|eng',
-    'Juve|d|w|ita',
-    'Liverpool|e|w|eng',
-    'Barca|f|w|esp',
-    'Leipzig|g|w|ger',
-    'Valencia|h|w|esp',
-    'Real|a|r|esp',
-    'Spurs|b|r|eng',
-    'Atalanta|c|r|ita',
-    'Atletico|d|r|esp',
-    'Napoli|e|r|ita',
-    'Dortmund|f|r|ger',
-    'Lyon|g|r|fra',
-    'Chelsea|h|r|eng'
+    'psg--a--w--fra',
+    'bayern--b--w--ger',
+    'city--c--w--eng',
+    'juve--d--w--ita',
+    'liverpool--e--w--eng',
+    'barca--f--w--esp',
+    'leipzig--g--w--ger',
+    'valencia--h--w--esp',
+    'real--a--r--esp',
+    'spurs--b--r--eng',
+    'atalanta--c--r--ita',
+    'atletico--d--r--esp',
+    'napoli--e--r--ita',
+    'dortmund--f--r--ger',
+    'lyon--g--r--fra',
+    'chelsea--h--r--eng'
   )
 ) %>% 
-  separate(team, into = c('team', 'group', 'finish', 'country'))
+  separate(team, sep = '--', into = c('team', 'group', 'finish', 'country'))
 
 teams
+```
+
+The actual process for the draw is very interesting.
+
+```{r echo=FALSE}
+blogdown::shortcode('youtube', 'iSR4PaAiHn4')
+```
+
+The process goes as follows:
+
+1. Split the teams into the winners and the runners-up
+2. Add a matchup number between 1 and 8 to each winner
+3. Add a random matchup number between 1 and 8 to each runner-up
+4. Join the winners and runners-up
+5. Check that the matchups meet the rules. Is there a matchup with two teams from the same country? Two teams from the same group? **If the answer to either question is yes, start over from step 3.**
+
+```{r}
+creatematchups = function(teams) {
+  winners = teams %>% filter(finish == 'w')
+  runnersup = teams %>% filter(finish == 'r')
+  
+  winners = winners %>% mutate(matchup = row_number())
+  valid = FALSE
+  while(!valid) {
+    runnersup = runnersup %>% mutate(matchup = sample(8))
+    runnersup
+    
+    matchups = winners %>% inner_join(
+      runnersup,
+      by = 'matchup',
+      suffix = c('.w', '.r')
+    )
+    
+    valid = (matchups %>% 
+      filter(group.w == group.r | country.w == country.r) %>% 
+      nrow()) == 0
+  }
+  return(matchups)
+}
+```
+
+```{r eval=FALSE, include=FALSE}
+creatematchups(teams)
 ```
 
