@@ -20,5 +20,14 @@
 I&#39;m a journalist at the Los Angeles Times, where I analyze data for stories that span a wide variety of subjects. As a member of the Data and Graphics team, I also write stories, craft visualizations and tackle random journalistic problems with the help of code. I&#39;ve been at The Times since 2013, when I started as a fellow in the Minority Editorial Training Program (commonly referred to as METPro).</description>
     </item>
     
+    <item>
+      <title>Portfolio</title>
+      <link>/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/</guid>
+      <description>Here is some of my work done in my role as a data journalist at the Los Angeles Times.</description>
+    </item>
+    
   </channel>
 </rss>
