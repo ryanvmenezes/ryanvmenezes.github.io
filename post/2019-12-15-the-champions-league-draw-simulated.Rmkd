@@ -5,30 +5,16 @@ author: Ryan Menezes
 date: '2019-12-15'
 draft: true
 slug: the-champions-league-draw-simulated
-categories: []
-tags: []
+# categories: []
+# tags: []
 # output:
 #   blogdown::html_page:
 #     toc: true
 ---
 
-About a year ago, I had a thought that turned into a quick analysis, which I summarized in this tweet:
-
 ```{r echo=FALSE}
 blogdown::shortcode('tweet', '1074556953190256640')
 ```
-
-I wanted to expand on why this particular event piqued my curiousity and share the code that generated these numbers.
-
-https://youtu.be/o_wmpUIAUTU?t=274
-
-As someone who grew up watching a truly absurd amount of American sports, my dive into the world of European football has been eye-opening. It's not the sport itself that is foreign to me -- I've always been a casual fan of soccer -- but rather the structure around competition that I've found totally foreign.
-
-<!-- Imagine Major League Baseball instituted a playoff series where each team hosts one game and the winner is decided by the total number of runs scored. I think this has a low chance of happening. But if it did, it surely would make the latter innings of every game meaningful. -->
-
-<!-- But it occurred to me that the possible matchups in the UEFA Champions League draw are not all equally likely. The draw has two rules: Teams who were in the same group one round earlier can't be drawn against each other, and neither can teams from the same country. After the winners advance from this round, things get truly random, and you can get  -->
-
-<!-- On a side note, I now find Wikipedia's use of a [bracket](https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League_knockout_phase#Bracket) to illustrate the knockout round very misleading. For years I stared at it thinking that group winners and runners-up were placed in a bracket  -->
 
 # The code
 
@@ -68,7 +54,9 @@ teams = tibble(
     sep = '--',
     into = c('team', 'group', 'finish', 'country')
   )
+```
 
+```{r}
 teams
 ```
 
