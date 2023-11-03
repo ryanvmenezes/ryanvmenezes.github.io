@@ -5,28 +5,34 @@
     <link>/</link>
     <description>Recent content in Home on Ryan Menezes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hello. I&#39;m Ryan Menezes. Here are some things you ought to know about me:
-I&#39;m a journalist at the Los Angeles Times, where I analyze data for stories that span a wide variety of subjects. As a member of the Data and Graphics team, I also write stories, craft visualizations and tackle random journalistic problems with the help of code. I&#39;ve been at The Times since 2013, when I started as a fellow in the Minority Editorial Training Program (commonly referred to as METPro).</description>
+      <description>Hello! I&amp;rsquo;m Ryan Menezes. Here are some things you ought to know about me:
+From 2013 to 2021 I was a journalist at the Los Angeles Times, where I analyzed data for stories across different subjects. As a member of the Data and Graphics team, I also wrote stories, crafted visualizations and tackled random journalistic problems with the help of code.
+My job at The Times combined two of my passions: storytelling and data analysis.</description>
     </item>
     
     <item>
-      <title>Portfolio</title>
+      <title>L.A. Times portfolio</title>
       <link>/portfolio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/portfolio/</guid>
-      <description>Since 2013, I&#39;ve been a data journalist covering a variety of topics at the Los Angeles Times. Here is some of my professional work.</description>
+      <description>I joined the L.A. Times in 2013 as a fellow in the Metpro training program. Across nearly eight years as a journalist there, I covered a variety of topics, always with an eye towards telling compelling stories after thorough data analysis. I utilized a variety of technical tools to accomplish this: R or python as an everyday starting point with data, QGIS for geospatial analysis, PostgreSQL databases for especially large queries and the front-end development stack of HTML, CSS and JavaScript to publish my work for a digital audience, with the help of the d3.</description>
+    </item>
+    
+    <item>
+      <title>Personal projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>Coming soon: Personal projects</description>
     </item>
     
   </channel>
