@@ -13,7 +13,7 @@
       
       <guid>/about/</guid>
       <description>Hello! I&amp;rsquo;m Ryan Menezes. Here are some things you ought to know about me:
-From 2013 to 2021 I was a journalist at the Los Angeles Times, where I analyzed data for stories across different subjects. As a member of the Data and Graphics team, I also wrote stories, crafted visualizations and tackled random journalistic problems with the help of code.
+From 2013 to 2021 I was a journalist at the Los Angeles Times, where I analyzed data for stories across different subjects. As a member of the Data and Graphics team, I also wrote, crafted visualizations and tackled random journalistic problems with the help of code.
 My job at The Times combined two of my passions: storytelling and data analysis.</description>
     </item>
     
@@ -32,7 +32,8 @@ My job at The Times combined two of my passions: storytelling and data analysis.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/portfolio/</guid>
-      <description>I joined the L.A. Times in 2013 as a fellow in the Metpro training program. Across nearly eight years as a journalist there, I covered a variety of topics, always with an eye towards telling compelling stories after thorough data analysis. I utilized a variety of technical tools to accomplish this: R or python as an everyday starting point with data, QGIS for geospatial analysis, PostgreSQL databases for especially large queries and the front-end development stack of HTML, CSS and JavaScript to publish my work for a digital audience, with the help of the d3.</description>
+      <description>I joined the L.A. Times, the newspaper I grew up reading, in 2013 as a fellow in the Metpro training program. Across nearly eight years as a journalist there I covered a variety of topics, always with an eye towards telling compelling stories after thorough data analysis.
+I utilized a variety of technical tools to accomplish this: R and python as an everyday starting point with data, QGIS for geospatial analysis, PostgreSQL databases for especially large queries and the front-end development stack of HTML, CSS and JavaScript to publish my work for a digital audience, with the help of the d3.</description>
     </item>
     
     <item>
